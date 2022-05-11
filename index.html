@@ -13,19 +13,6 @@
     <div id="grid-container"></div>
   </div>
 
-  <script>
-    const gridContainer = document.querySelector('#grid-container');
-
-    function createGrid(rows, columns) {
-      gridContainer.style.setProperty('--grid-rows', rows);
-      gridContainer.style.setProperty('--grid-columns', columns);
-      for(let i = 0; i < (rows * columns); i++) {
-        let square = document.createElement('div');
-        gridContainer.appendChild(square).className = 'grid-items';
-      }
-    }
-
-    createGrid(16, 16);
-  </script>
+  <script src="javascript.js"></script>
 </body>
 </html>
