@@ -14,13 +14,15 @@
     const gridContainer = document.querySelector('#grid-container');
 
     function createGrid(rows, columns) {
-      gridContainer.setProperty('--grid-rows', rows);
-      grid.container.setProperty('--grid-columns', columns);
-      for(let i = 0; i < rows * columns; i++) {
+      gridContainer.style.setProperty('--grid-rows', rows);
+      gridContainer.style.setProperty('--grid-columns', columns);
+      for(let i = 0; i < (rows * columns); i++) {
         let square = document.createElement('div');
-        gridContainer.appendChild(square);
+        gridContainer.appendChild(square).className = 'grid-items';
       }
     }
+
+    createGrid(16, 16);
   </script>
 </body>
 </html>
