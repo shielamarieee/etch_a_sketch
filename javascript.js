@@ -30,17 +30,17 @@ const gridContainer = document.querySelector('#grid-container');
       if(userInput === null) {
         return;
       } else if(userInput < 100 || userInput > 1) {
-        removeGrid()
-        makeGrid(userInput, userInput);
+        removeGrid();
+        createGrid(userInput, userInput);
       }
       //loop prompt til given number within range
       while(userInput > 100 || userInput < 1 || isNaN(userInput)){
-        userInput = parseInt(prompt('please input numbers only from 1 - 100', 16))
+        userInput = parseInt(prompt('please input numbers only from 1 - 100', 16));
         if(userInput === null) {
           return;
         } else {
           removeGrid();
-          makeGrid(userInput, userInput);
+          createGrid(userInput, userInput);
         }
       }
     })
