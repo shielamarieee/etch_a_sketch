@@ -1,14 +1,19 @@
 const gridContainer = document.querySelector('#grid-container');
 
     function createGrid(rows, columns) {
-      gridContainer.style.setProperty('--grid-rows', rows);
-      gridContainer.style.setProperty('--grid-columns', columns);
       for(let i = 0; i < (rows * columns); i++) {
+        gridContainer.style.setProperty('--grid-rows', rows);
+        gridContainer.style.setProperty('--grid-columns', columns);
         let square = document.createElement('div');
-        gridContainer.appendChild(square).className = 'grid-items';
+        gridContainer.appendChild(square).className = 'grid-item';
         //fill color
         square.addEventListener('mouseover', () => {
           square.style.backgroundColor = 'black';
+          if(parseFloat(square.style.opacity)) {
+            square.style.opacity = parseFloat(square.style.opacity) + 0.2;
+          } else {
+            square.style.opacity = 0.2;
+          }
         })
       }
     }
