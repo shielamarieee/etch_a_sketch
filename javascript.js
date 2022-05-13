@@ -39,4 +39,11 @@ const gridContainer = document.querySelector('#grid-container');
         }
       }
     })
+
+    function removeGrid() {
+      const gridItem = document.querySelectorAll('.grid-item');
+      gridItem.forEach((item) => {
+        gridContainer.removeChild(item);
+      })
+    }
     
