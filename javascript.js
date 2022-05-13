@@ -6,16 +6,12 @@ const gridContainer = document.querySelector('#grid-container');
       for(let i = 0; i < (rows * columns); i++) {
         let square = document.createElement('div');
         gridContainer.appendChild(square).className = 'grid-items';
+        //fill color
+        square.addEventListener('mouseover', () => {
+          square.style.backgroundColor = 'black';
+        })
       }
     }
 
     //call function
     createGrid(16, 16);
-
-    //hover event 
-    const gridItems = document.querySelectorAll('.grid-items')
-    gridItems.forEach((gridItem) => {
-      gridItem.addEventListener('mouseover', () => {
-        gridItem.style.backgroundColor = 'black';
-      });
-    })
